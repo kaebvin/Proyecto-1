@@ -1,0 +1,184 @@
+Universidad Tecnológica de Panamá 
+Facultad de Ingeniería de Sistemas Computacionales
+Licenciatura de Ciberseguridad
+ 
+ 
+Profesora: Marlina Sánchez
+ 
+ 
+ Estudiantes:
+Carlota Wu
+3-753-1795
+ 
+Kevin Zhen
+8-1016-801
+ 
+
+Proyecto #1
+ 
+ 
+ 
+ 
+ 
+ 
+ Fecha: 29/05/2023
+
+
+
+1. El problema de la isla de Manhattan, la misma fue vendida por los indios a los colonos en 1627 por equivalente a $24 dólares en piezas de fantasías y dijes. Este programa debe calcular el valor que tendría la inversión en el año de 1976. Si el dinero se hubiese invertido al 6% de interés compuesto anualmente.
+
+Algoritmo Manhattan
+{  //Definición de variables
+	real Ci = 24.0, Cf, Ti = 0.06, a = 349;  //349 es la cantidad de años (1976-1627)
+
+	Cf = (Ci*(1+0.06))**a;
+	Imprimir (“El valor que tendría la inversión en el año 1976 es de: “, Cf);
+} //Fin Algoritmo
+
+
+2. Diseñar un algoritmo que nos permite calcular los primeros términos de la serie Fibonacci de un número introducido por teclado.
+
+Algoritmo Fibonacci
+{ //Definición de variables
+       entero num, c = 0, n1 = 0, n2 = 1, suma;
+       Imprimir (“¿Cuántos números de la serie de Fibonacci desea saber?:”);
+       Leer (num);
+       
+       Mientras (c <= num)
+       { 
+       Imprimir (n1);
+       suma = n1 + n2;
+       n1 = n2;
+       n2 = suma;
+       
+       c = c +1;
+	} //Fin Mientras
+       } //Fin Algoritmo
+
+
+
+
+3. Leer 10 números y encontrar el mayor y el menor. 
+
+Algoritmo Mayor_Menor
+{  //Definición de Variables
+entero c, num, mayor, menor; 
+Imprimir (“Ingrese un número: ”) ;
+Leer (num) ;
+menor = mayor = num ; 
+para (c=1 ; c<=10 ; c++)
+{ Imprimir (“Ingrese un número: “) ;
+Leer (num);
+
+si (num > mayor)
+mayor = num ; 
+si (num < menor)
+menor = num ; 
+
+Imprimir (“El numero mayor es: ” , mayor ) ;
+Imprimir (“El numero menor es: ” , menor ) ;
+
+} //Fin 
+
+4. Determine el ganador del juego piedra-papel-tijera. Considere 3 participantes, 3 rondas, muestra las puntuaciones de cada participante en cada ronda y el ganador.
+
+Algoritmo Juego
+{ //Definición de variables
+entero c, j1, j2, j3, pj1 = 0, pj2 = 0, pj3 = 0 ;
+
+Para (c = 0 ; c<=2 ; c++) //Jugada
+{Imprimir (“Jugador 1 elija una opción: ”);
+Imprimir (“1.Piedra,  2. Papel, 3. Tijera ”);
+Leer (j1);
+Imprimir (“Jugador 2 elija una opción: ”);
+Imprimir (“1.Piedra,  2. Papel, 3. Tijera ”);
+Leer (j2);
+Imprimir (“Jugador 3 elija una opción: ”);
+Imprimir (“1.Piedra,  2. Papel, 3. Tijera ”);
+Leer (j3);
+
+//Empates
+Si (j1 == j2) && (j2 == j3) entonces
+{Imprimir (“Empate”); }
+Si (j1 != j2) && (j2 != j3) && (j1 != j3) entonces
+{Imprimir (“Empate”); }
+
+//Gana1
+Si (j1 == 1) && (j2 == 3) && (j3 == 3) entonces
+pj1 = pj1 + 1 ; 
+Si (j1 == 1) && (j2 == 1) && (j3 == 3) entonces
+pj1 = pj1 + 1 ; 
+pj2 = pj2 + 1 ;
+Si (j1 == 1) && (j2 == 3) && (j3 == 1) entonces
+pj1 = pj1 + 1 ; 
+pj3 = pj3 + 1 ;
+Si (j1 == 2) && (j2 == 1) && (j3 == 1) entonces
+pj1 = pj1 + 1 ; 
+Si (j1 == 2) && (j2 == 2) && (j3 == 1) entonces
+pj1 = pj1 + 1 ; 
+pj2 = pj2 + 1 ;
+Si (j1 == 2) && (j2 == 1) && (j3 == 2) entonces
+pj1 = pj1 + 1 ; 
+pj3 = pj3 + 1 ;
+Si (j1 == 3) && (j2 == 2) && (j3 == 2) entonces
+pj1 = pj1 + 1 ; 
+Si (j1 == 3) && (j2 == 3) && (j3 == 2) entonces
+pj1 = pj1 + 1 ; 
+pj2 = pj2 + 1 ;
+Si (j1 == 3) && (j2 == 2) && (j3 == 3) entonces
+pj1 = pj1 + 1 ; 
+pj3 = pj3 + 1 ;
+
+//Gana2
+Si (j2 == 1) && (j1 == 3) && (j3 == 3) entonces
+pj2 = pj2 + 1 ; 
+Si (j2 == 1) && (j1 == 3) && (j3 == 1) entonces
+pj2 = pj2 + 1 ; 
+pj3 = pj3 + 1 ;   
+Si (j2 == 2) && (j1 == 1) && (j3 == 1) entonces
+pj2 = pj2 + 1 ; 
+Si (j2 == 2) && (j1 == 1) && (j3 == 2) entonces
+pj2 = pj2 + 1 ; 
+pj3 = pj3 + 1 ;   
+Si (j2 == 3) && (j1 == 2) && (j3 == 2) entonces
+pj2 = pj2 + 1 ; 
+Si (j2 == 3) && (j1 == 2) && (j3 == 3) entonces
+pj2 = pj2 + 1 ; 
+pj3 = pj3 + 1 ;   
+
+//Gana3
+Si (j3 == 1) && (j2 == 3) && (j1 == 3) entonces
+pj3 = pj3 + 1 ; 
+Si (j3 == 1) && (j2 == 1) && (j1 == 3) entonces
+pj2 = pj2 + 1 ; 
+pj3 = pj3 + 1 ;   
+Si (j3 == 2) && (j2 == 1) && (j1 == 1) entonces
+pj3 = pj3 + 1 ; 
+Si (j3 == 2) && (j2 == 2) && (j1 == 1) entonces
+pj2 = pj2 + 1 ; 
+pj3 = pj3 + 1 ;   
+Si (j3 == 3) && (j2 == 2) && (j1 == 2) entonces
+pj3 = pj3 + 1 ; 
+Si (j3 == 3) && (j2 == 3) && (j1 == 2) entonces
+pj2 = pj2 + 1 ; 
+pj3 = pj3 + 1 ;   
+
+} //Fin Para
+
+Imprimir (“Jugador 1: ” , pj1 “puntos” ) ;
+Imprimir (“Jugador 2: ” , pj2 “puntos” ) ;
+Imprimir (“Jugador 3: ” , pj3 “puntos” ) ;
+Si (pj1 > pj2) && (pj1 > pj3) entonces
+{Imprimir (“Gana el Jugador 1”) ; }
+Si (pj2 > pj1) && (pj2 > pj3) entonces
+{Imprimir (“Gana el Jugador 2”) ; }
+Si (pj3 > pj2) && (pj3 > pj1) entonces
+{Imprimir (“Gana el Jugador 3”) ; }
+Si (pj1 == pj2) && (pj1 > pj3) entonces
+{Imprimir (“Empate entre Jugador 1 y 2”) ; }
+Si (pj1 == pj3) && (pj1 > pj2) entonces
+{Imprimir (“Empate entre Jugador 1 y 3”) ; }
+Si (pj3 == pj2) && (pj3 > pj1) entonces
+{Imprimir (“Empate entre Jugador 3 y 2”) ; }
+
+} //Fin

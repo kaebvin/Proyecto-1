@@ -182,3 +182,6 @@ Si (pj3 == pj2) && (pj3 > pj1) entonces
 {Imprimir (“Empate entre Jugador 3 y 2”) ; }
 
 } //Fin
+
+
+RECOMIENDO SUBIR TU ARCHIVO DESDE UN EDITOR DE CODIGOS Y NO DESDE EL TXT.

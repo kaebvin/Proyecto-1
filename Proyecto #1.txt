@@ -1,9 +1,9 @@
-Universidad Tecnológica de Panamá 
-Facultad de Ingeniería de Sistemas Computacionales
+Universidad TecnolÃ³gica de PanamÃ¡ 
+Facultad de IngenierÃ­a de Sistemas Computacionales
 Licenciatura de Ciberseguridad
  
  
-Profesora: Marlina Sánchez
+Profesora: Marlina SÃ¡nchez
  
  
  Estudiantes:
@@ -25,23 +25,23 @@ Proyecto #1
 
 
 
-1. El problema de la isla de Manhattan, la misma fue vendida por los indios a los colonos en 1627 por equivalente a $24 dólares en piezas de fantasías y dijes. Este programa debe calcular el valor que tendría la inversión en el año de 1976. Si el dinero se hubiese invertido al 6% de interés compuesto anualmente.
+1. El problema de la isla de Manhattan, la misma fue vendida por los indios a los colonos en 1627 por equivalente a $24 dÃ³lares en piezas de fantasÃ­as y dijes. Este programa debe calcular el valor que tendrÃ­a la inversiÃ³n en el aÃ±o de 1976. Si el dinero se hubiese invertido al 6% de interÃ©s compuesto anualmente.
 
 Algoritmo Manhattan
-{  //Definición de variables
-	real Ci = 24.0, Cf, Ti = 0.06, a = 349;  //349 es la cantidad de años (1976-1627)
+{  //DefiniciÃ³n de variables
+	real Ci = 24.0, Cf, Ti = 0.06, a = 349;  //349 es la cantidad de aÃ±os (1976-1627)
 
 	Cf = (Ci*(1+0.06))**a;
-	Imprimir (“El valor que tendría la inversión en el año 1976 es de: “, Cf);
+	Imprimir (â€œEl valor que tendrÃ­a la inversiÃ³n en el aÃ±o 1976 es de: â€œ, Cf);
 } //Fin Algoritmo
 
 
-2. Diseñar un algoritmo que nos permite calcular los primeros términos de la serie Fibonacci de un número introducido por teclado.
+2. DiseÃ±ar un algoritmo que nos permite calcular los primeros tÃ©rminos de la serie Fibonacci de un nÃºmero introducido por teclado.
 
 Algoritmo Fibonacci
-{ //Definición de variables
+{ //DefiniciÃ³n de variables
        entero num, c = 0, n1 = 0, n2 = 1, suma;
-       Imprimir (“¿Cuántos números de la serie de Fibonacci desea saber?:”);
+       Imprimir (â€œÂ¿CuÃ¡ntos nÃºmeros de la serie de Fibonacci desea saber?:â€);
        Leer (num);
        
        Mientras (c <= num)
@@ -58,16 +58,16 @@ Algoritmo Fibonacci
 
 
 
-3. Leer 10 números y encontrar el mayor y el menor. 
+3. Leer 10 nÃºmeros y encontrar el mayor y el menor. 
 
 Algoritmo Mayor_Menor
-{  //Definición de Variables
+{  //DefiniciÃ³n de Variables
 entero c, num, mayor, menor; 
-Imprimir (“Ingrese un número: ”) ;
+Imprimir (â€œIngrese un nÃºmero: â€) ;
 Leer (num) ;
 menor = mayor = num ; 
-para (c=1 ; c<=10 ; c++)
-{ Imprimir (“Ingrese un número: “) ;
+para (c=1 ; c<10 ; c++)
+{ Imprimir (â€œIngrese un nÃºmero: â€œ) ;
 Leer (num);
 
 si (num > mayor)
@@ -75,33 +75,33 @@ mayor = num ;
 si (num < menor)
 menor = num ; 
 
-Imprimir (“El numero mayor es: ” , mayor ) ;
-Imprimir (“El numero menor es: ” , menor ) ;
+Imprimir (â€œEl numero mayor es: â€ , mayor ) ;
+Imprimir (â€œEl numero menor es: â€ , menor ) ;
 
 } //Fin 
 
 4. Determine el ganador del juego piedra-papel-tijera. Considere 3 participantes, 3 rondas, muestra las puntuaciones de cada participante en cada ronda y el ganador.
 
 Algoritmo Juego
-{ //Definición de variables
+{ //DefiniciÃ³n de variables
 entero c, j1, j2, j3, pj1 = 0, pj2 = 0, pj3 = 0 ;
 
 Para (c = 0 ; c<=2 ; c++) //Jugada
-{Imprimir (“Jugador 1 elija una opción: ”);
-Imprimir (“1.Piedra,  2. Papel, 3. Tijera ”);
+{Imprimir (â€œJugador 1 elija una opciÃ³n: â€);
+Imprimir (â€œ1.Piedra,  2. Papel, 3. Tijera â€);
 Leer (j1);
-Imprimir (“Jugador 2 elija una opción: ”);
-Imprimir (“1.Piedra,  2. Papel, 3. Tijera ”);
+Imprimir (â€œJugador 2 elija una opciÃ³n: â€);
+Imprimir (â€œ1.Piedra,  2. Papel, 3. Tijera â€);
 Leer (j2);
-Imprimir (“Jugador 3 elija una opción: ”);
-Imprimir (“1.Piedra,  2. Papel, 3. Tijera ”);
+Imprimir (â€œJugador 3 elija una opciÃ³n: â€);
+Imprimir (â€œ1.Piedra,  2. Papel, 3. Tijera â€);
 Leer (j3);
 
 //Empates
 Si (j1 == j2) && (j2 == j3) entonces
-{Imprimir (“Empate”); }
+{Imprimir (â€œEmpateâ€); }
 Si (j1 != j2) && (j2 != j3) && (j1 != j3) entonces
-{Imprimir (“Empate”); }
+{Imprimir (â€œEmpateâ€); }
 
 //Gana1
 Si (j1 == 1) && (j2 == 3) && (j3 == 3) entonces
@@ -165,20 +165,20 @@ pj3 = pj3 + 1 ;
 
 } //Fin Para
 
-Imprimir (“Jugador 1: ” , pj1 “puntos” ) ;
-Imprimir (“Jugador 2: ” , pj2 “puntos” ) ;
-Imprimir (“Jugador 3: ” , pj3 “puntos” ) ;
+Imprimir (â€œJugador 1: â€ , pj1 â€œpuntosâ€ ) ;
+Imprimir (â€œJugador 2: â€ , pj2 â€œpuntosâ€ ) ;
+Imprimir (â€œJugador 3: â€ , pj3 â€œpuntosâ€ ) ;
 Si (pj1 > pj2) && (pj1 > pj3) entonces
-{Imprimir (“Gana el Jugador 1”) ; }
+{Imprimir (â€œGana el Jugador 1â€) ; }
 Si (pj2 > pj1) && (pj2 > pj3) entonces
-{Imprimir (“Gana el Jugador 2”) ; }
+{Imprimir (â€œGana el Jugador 2â€) ; }
 Si (pj3 > pj2) && (pj3 > pj1) entonces
-{Imprimir (“Gana el Jugador 3”) ; }
+{Imprimir (â€œGana el Jugador 3â€) ; }
 Si (pj1 == pj2) && (pj1 > pj3) entonces
-{Imprimir (“Empate entre Jugador 1 y 2”) ; }
+{Imprimir (â€œEmpate entre Jugador 1 y 2â€) ; }
 Si (pj1 == pj3) && (pj1 > pj2) entonces
-{Imprimir (“Empate entre Jugador 1 y 3”) ; }
+{Imprimir (â€œEmpate entre Jugador 1 y 3â€) ; }
 Si (pj3 == pj2) && (pj3 > pj1) entonces
-{Imprimir (“Empate entre Jugador 3 y 2”) ; }
+{Imprimir (â€œEmpate entre Jugador 3 y 2â€) ; }
 
 } //Fin
